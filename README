@@ -1,0 +1,22 @@
+This is a set of PyLint plugins I quickly hacked together for detecting usage
+of features which were added in Python 2.4 or Python 2.5 for a project where it
+was important to ensure Python 2.3 compatibility, even though primary
+development was being done on Python 2.5.
+
+I will eventually expand this to include Python 2.6 features as well.  I have
+no current plans to handle earlier Python releases.  I've also considered
+creating plugins to detect usage of deprecated or removed modules, but have no
+immediate need for such plugins.
+
+For usage details, see the pyver.sh script in the scripts directory.  The two
+functional plugins at present are:
+
+    pyver/py23_checker.py: Check for 2.4-isms which won't work in 2.3
+    pyver/py24_checker.py: Check for 2.5-isms which won't work in 2.4
+
+There is also a pyver/py25_checker.py, but it does not presently have any
+checks in it.  It does contain, in comments, a summary of what I understand to
+have changed between 2.5 and 2.6, based on a careful scouring of the 2.6
+release notes, or at least those changes which I believe are detectable via a
+PyLint plugin.  (That is, mostly either language features, new modules, new
+functions, new arguments to old functions, etc.)
