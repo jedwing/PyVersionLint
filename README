@@ -1,3 +1,7 @@
+==================
+PyVersionLint 0.01
+==================
+
 This is a set of PyLint plugins I quickly hacked together for detecting usage
 of features which were added in Python 2.4 or Python 2.5 for a project where it
 was important to ensure Python 2.3 compatibility, even though primary
